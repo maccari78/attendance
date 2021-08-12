@@ -9,13 +9,9 @@
 <body>
     <h2>Follow each link to the page example</h2>
     <ul>
-        <li><a href="question1.php">Question 01</a></li>
-        <li><a href="math.php">Quick math</a></li>
         <li><a href="array.php">Simple array and printouts</a></li>
         <li><a href="forloop.php">Simple FOR LOOP</a></li>
-        <li><a href="dowhileloop.php">Simple DO WHILE LOOP</a></li>
-        <li><a href="question2.php">Question 02</a></li>
-        <li><a href="whileloop.php">Simple WHILE LOOP</a></li>
+        <li><a href="whiledowhileloop.php">Simple WHILE / DO WHILE LOOP</a></li>
         <li><a href="ifstatement.php">Simple IF statement</a></li>
         <li><a href="switchstatement.php">Simple SWITCH statement</a></li>
     </ul>
