@@ -1,10 +1,17 @@
 <?php
-    $host = '127.0.0.1';
-    $db = 'attendance_db';
-    $user = 'root';
-    $pass = '';
-    $charset = 'utf8mb4';
+    // Development connection
+    // $host = '127.0.0.1';
+    // $db = 'attendance_db';
+    // $user = 'root';
+    // $pass = '';
+    // $charset = 'utf8mb4';
 
+    // Remote database connection
+    $host = 'remotemysql.com';
+    $db = 'gdCuaxXNXP';
+    $user = 'gdCuaxXNXP';
+    $pass = 'pgYItifHwu';
+    $charset = 'utf8mb4';
     $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 
     try{
