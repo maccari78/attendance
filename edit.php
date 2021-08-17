@@ -2,6 +2,7 @@
     $title = 'Edit record';
 
     require_once 'includes/header.php';
+    require_once 'includes/auth_check.php';
     require_once 'db/conn.php';
 
     $results = $crud->getSpecialties();
@@ -13,7 +14,6 @@
     } else {
         $id = $_GET['id'];
         $attendee = $crud->getAttendeeDetails($id);
-
 ?>
     <h1 class="text-center">Edit record</h1>
     

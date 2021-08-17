@@ -1,3 +1,9 @@
+<?php
+  // This includes the session file. This file contains code that start/resumes a session
+  // by having it in the hearder file it will be included on every page allowing session capability to be used on every page across the website
+  include_once 'includes/session.php';
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -21,10 +27,19 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="index.php">Home <span class="sr-only">(current)</span></a>
+        <div class="navbar-nav me-auto">
+          <a class="nav-link active" aria-current="page" href="index.php">Home <span class="sr-only"></span></a>
           <a class="nav-link" href="viewrecords.php">View attendees</a>
-
+        </div>
+        <div class="navbar-nav ms-auto">
+          <?php 
+            if(!isset($_SESSION['userid'])) {
+          ?>
+            <a class="nav-item nav-link" aria-current="page" href="login.php">Login <span class="sr-only"></span></a>
+          <?php } else { ?>
+            <a class="nav-item nav-link" aria-current="page">Hello <?php echo $_SESSION['username']; ?>!<span class="sr-only"></span></a>
+            <a class="nav-item nav-link" aria-current="page" href="logout.php">Logout <span class="sr-only"></span></a>
+          <?php } ?>
         </div>
       </div>
     </div>
