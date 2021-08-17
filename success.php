@@ -12,7 +12,7 @@
         $email = $_POST['email'];
         $contact = $_POST['phone'];
         $specialty = $_POST['specialty'];
-
+        
         $orig_file = $_FILES["avatar"]["tmp_name"];
         $ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
         $target_dir = 'uploads/';
