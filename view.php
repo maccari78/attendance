@@ -15,6 +15,8 @@
         $id = $_GET['id'];
         $result = $crud->getAttendeeDetails($id);
 ?>
+<img src="<?php echo empty($result['avatar_path']) ? "uploads/blank.png" : $result['avatar_path']; ?>" 
+class="rounded-circle" style="width: 30%; height: 30%" />
 
 <!-- This prints outs values that were passed to the action page using method="post" -->
     <div class="card" style="width: 25rem;">

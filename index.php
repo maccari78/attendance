@@ -47,9 +47,14 @@
             <input required type="text" class="form-control" id="phone" name="phone" aria-describedby="phonelHelp">
             <small id="phoneHelp" class="form-text text-mutted">We'll never share your number with anyone else.</small>
         </div>
+        <div class="mb-3 custom-file">
+            <input type="file" accept="image/*" class="custom-file-input" id="avatar" name="avatar">
+            <label class="custom-file-label" for="avatar" >Choose file</label>
+            <small id="avatar" class="form-text text-danger">File upload is optional.</small>
+        </div>
         <div class="d-grid gap-2">
             <button type="submit" name="submit" class="btn btn-primary">Submit</button>
         </div>
     </form>
-<br><br><br><br>
+<br/><br/><br/><br/>
 <?php require_once 'includes/footer.php'; ?>

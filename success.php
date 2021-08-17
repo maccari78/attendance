@@ -1,6 +1,5 @@
 <?php 
     $title = 'Success';
-
     require_once 'includes/header.php';
     require_once 'db/conn.php';
     require_once 'sendemail.php';
@@ -13,8 +12,15 @@
         $email = $_POST['email'];
         $contact = $_POST['phone'];
         $specialty = $_POST['specialty'];
+
+        $orig_file = $_FILES["avatar"]["tmp_name"];
+        $ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
+        $target_dir = 'uploads/';
+        $destination = "$target_dir$contact.$ext";
+        move_uploaded_file($orig_file,$destination);
+
         // Call function to insert and track if success or not
-        $isSuccess = $crud->insertAttendees($fname, $lname, $dob, $email, $contact, $specialty);
+        $isSuccess = $crud->insertAttendees($fname, $lname, $dob, $email, $contact, $specialty, $destination);
         $specialtyName = $crud->getSpecialtyById($specialty);
 
         if($isSuccess){
@@ -46,6 +52,7 @@
     -->
 
     <!-- This prints outs values that were passed to the action page using method="post" -->
+    <img src="<?php echo $destination; ?>" class="rounded-circle" style="width: 30%; height: 30%" />
     <div class="card" style="width: 25rem;">
         <div class="card-body">
             <h5 class="card-title"><?php echo $_POST['firstname'] . ' ' . $_POST['lastname']; ?></h5>

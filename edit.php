@@ -52,10 +52,9 @@
             <small id="phoneHelp" class="form-text text-mutted">We'll never share your number with anyone else.</small>
         </div>
         
-        <div class="d-grid gap-2 d-md-block">
             <a href="viewrecords.php" class="btn btn-default">Back to list</a>
             <button type="submit" name="submit" class="btn btn-success">Save changes</button>
-        </div>
+        
     </form>
 <?php } ?>
 <br><br><br><br>
